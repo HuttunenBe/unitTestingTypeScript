@@ -51,3 +51,18 @@ test("sumArray works correctly", () => {
   expect(sumOfArray([1, 2, 3, 4])).toBe(10);
   expect(sumOfArray([])).toBe(0);
 });
+
+
+describe("Arithmetic tests", () => {
+  test("test 1 + 1 = 2", () => {
+    expect(1 + 1).toBe(2);
+  });
+});
+
+it("test 1 + 2 = 3", () => {
+  expect(1 + 2).toBe(3);
+});
+
+it("test 1 + 2 = 3", () => {
+  expect(1 + 2).not.toBe(4);
+});

@@ -1,3 +1,5 @@
+"use strict";
+
 import { reverseString, isPalindrome } from "../src/strings";
 
 test("reverse a string", () => {
@@ -12,3 +14,13 @@ test("check if string is palindrome", () => {
   expect(isPalindrome("hello")).not.toBe(true);
   expect(isPalindrome("Racecar")).not.toBe(false);
 });
+
+// Tests without function file
+
+test("string test", () => {
+  console.log("string test");
+});
+
+
+
+

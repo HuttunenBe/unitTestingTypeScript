@@ -34,3 +34,4 @@ export function reverseString(str: string): string {
 export function sumOfArray(arr: number[]): number {
   return arr.reduce((acc, n) => acc + n, 0);
 }
+
