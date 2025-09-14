@@ -33,15 +33,15 @@ const testValues: [number, number, number][] = [
     [1, 1, 2],
     [2, 3, 5],
     [0, 0, 0]
-];
+]; // multiple inputs
 
 test.each(testValues)('sum(%i, %i) = %i', (a, b, expected) => {
     expect(a + b).toBe(expected);
-});
+}); // %i -> placeholder for numbers in the test name.
 
 
 const testValues2: [string, number, number, number][] = [
-    ['adding positive numbers', 2, 3, 5],
+    ['adding positives', 2, 3, 5],
     ['adding negatives', -1, -1, -2]
 ];
 
@@ -49,6 +49,6 @@ test.each(testValues2)('%s', (label, a, b, expected) => {
     expect(a + b).toBe(expected);
 });
 
-test('0.1 + 0.2 is approximately 0.3', () => {
+test('0.1 + 0.2 is approx 0.3', () => {
     expect(0.1 + 0.2).toBeCloseTo(0.3);
 });

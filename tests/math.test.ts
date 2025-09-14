@@ -2,7 +2,7 @@
 
 const { sum } = require("../src/math");
 
-describe("Testing sum with integers", () => {
+describe("testing sum", () => {
   test("sum of 2 + 3 is 5", () => {
     expect(sum(2, 3)).toBe(5);
   });
@@ -30,7 +30,7 @@ describe("Testing sum with integers", () => {
   });
 });
 
-describe("Testing sum with floats", () => {
+describe("testing sum with floats", () => {
   const testValues = [
     [10, 11.5, 21.5],
     [2.5, 3, 5.5],
@@ -59,9 +59,9 @@ describe("Test cases for parameter missing", () => {
   });
 });
 
-describe("Testing parameters not numbers", () => {
+describe("Testing parameters", () => {
   const testValues: [string, any, any][] = [
-    ["both numbers as strings", "1", "2"],
+    ["both numbers strings", "1", "2"],
     ["string and number", "a", 1],
     ["two letters", "a", "b"],
   ];
@@ -71,7 +71,7 @@ describe("Testing parameters not numbers", () => {
   });
 });
 
-describe("Testing numbers not between -500 and 500", () => {
+describe("testing numbers not between -500 and 500", () => {
   const testValues = [
     [1000, 500],
     [500, 1000],
