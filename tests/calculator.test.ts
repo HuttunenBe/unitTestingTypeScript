@@ -41,7 +41,6 @@ test("min works correctly", () => {
   expect(min(7, 2)).toBe(2);
 });
 
-
 test("reverseString works correctly", () => {
   expect(reverseString("hello")).toBe("olleh");
   expect(reverseString("TypeScript")).toBe("tpircSepyT");
@@ -51,7 +50,6 @@ test("sumArray works correctly", () => {
   expect(sumOfArray([1, 2, 3, 4])).toBe(10);
   expect(sumOfArray([])).toBe(0);
 });
-
 
 describe("Arithmetic tests", () => {
   test("test 1 + 1 = 2", () => {

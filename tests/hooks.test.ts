@@ -14,6 +14,6 @@ afterEach(() => {
   console.log("run after each");
 });
 
-test('test placeholder', () => {
+test("test placeholder", () => {
   expect(true).toBe(true);
 });
