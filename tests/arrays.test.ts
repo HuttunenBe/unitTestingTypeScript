@@ -1,5 +1,9 @@
-import { mergedArray } from "../src/arrays";
-import { joinStrings } from "../src/arrays";
+import {
+  mergedArray,
+  joinStrings,
+  sumArrays,
+  concatAndUppercase,
+} from "../src/arrays";
 
 describe("mergeArrays", () => {
   // grouping related tests together
@@ -35,5 +39,44 @@ describe("joinStrings", () => {
 
   test("both arrays not empty", () => {
     expect(joinStrings(["hello"], ["tests"])).toEqual(["hello", "tests"]);
+  });
+});
+
+describe("sumArrays", () => {
+  test("arrays empty", () => {
+    expect(sumArrays([], [])).toBe(0);
+  });
+
+  test("first empty, second not empty", () => {
+    expect(sumArrays([], [1, 2, 3])).toBe(6);
+  });
+
+  test("first not empty, second empty", () => {
+    expect(sumArrays([4, 5], [])).toBe(9);
+  });
+
+  test("both arrays not empty", () => {
+    expect(sumArrays([1, 2], [3, 4])).toBe(10);
+  });
+});
+
+describe("concatAndUppercase", () => {
+  test("arrays empty", () => {
+    expect(concatAndUppercase([], [])).toEqual([]);
+  });
+
+  test("first empty, second not empty", () => {
+    expect(concatAndUppercase([], ["a", "b"])).toEqual(["A", "B"]);
+  });
+
+  test("first not empty, second empty", () => {
+    expect(concatAndUppercase(["c", "d"], [])).toEqual(["C", "D"]);
+  });
+
+  test("both arrays not empty", () => {
+    expect(concatAndUppercase(["hello"], ["world"])).toEqual([
+      "HELLO",
+      "WORLD",
+    ]);
   });
 });
